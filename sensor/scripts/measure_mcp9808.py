@@ -26,8 +26,8 @@ api_headers= { 'Content-Type': 'application/json', 'appKey': TWX_APPKEY }
 while True:
     tempC = mcp.temperature
 
-#    tempF = tempC * 9 / 5 + 32
-#    print('Temperature: {} C {} F '.format(tempC, tempF))
+    tempF = tempC * 9 / 5 + 32
+    print('Temperature: {} C {} F '.format(tempC, tempF))
 
     payload = {'numberProperty': tempC }
     response = requests.put(api_endpoint, headers=api_headers, json=payload, verify=False)
