@@ -29,8 +29,10 @@ while True:
     tempF = tempC * 9 / 5 + 32
     print('Temperature: {} C {} F '.format(tempC, tempF))
 
-    payload = {'numberProperty': tempC }
+    payload = {'temperature': tempC }
     response = requests.put(api_endpoint, headers=api_headers, json=payload, verify=False)
     # in a production environment, the SSL certificate should be verified
+
+    response.raise_for_status()
 
     time.sleep(10)
