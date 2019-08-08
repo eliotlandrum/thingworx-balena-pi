@@ -1,6 +1,6 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build
 
-RUN pip install adafruit-circuitpython-mcp9808
+RUN pip install adafruit-circuitpython-mcp9808 requests
 
 WORKDIR /usr/src/app
 
