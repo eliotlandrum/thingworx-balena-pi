@@ -1,0 +1,10 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build
+
+RUN pip install adafruit-circuitpython-mcp9808
+
+WORKDIR /usr/src/app
+
+COPY ./scripts ./scripts
+RUN chmod +x scripts/*.py
+
+CMD /usr/src/app/scripts/measure_mcp9808.py
