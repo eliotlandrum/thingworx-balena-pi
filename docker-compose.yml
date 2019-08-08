@@ -1,6 +1,6 @@
 version: '2'
 services:
-  thingworx:
+  sensor:
     build: ./sensor
     restart: always
     privileged: true
