@@ -20,7 +20,7 @@ except IOError:
     sys.exit("Problem trying to find the sensor")
 
 # Setup the Rest API connection properties
-api_endpoint = 'https://' + TWX_SERVER + '/Thingworx/Things/' + TWX_THINGNAME + '/Properties/*'
+api_endpoint = 'https://' + TWX_SERVER + '/Thingworx/Things/' + TWX_THINGNAME + '/Properties/temperature'
 api_headers= { 'Content-Type': 'application/json', 'appKey': TWX_APPKEY }
 
 while True:
