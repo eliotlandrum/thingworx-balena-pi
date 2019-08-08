@@ -9,9 +9,9 @@ import json
 import requests
 
 # Config items
-TWX_SERVER = "localhost"
+TWX_SERVER = "pp-1907171416cp.portal.ptc.io"
 TWX_THINGNAME = "ExampleThing"
-TWX_APPKEY = ""
+TWX_APPKEY = "4d2a6116-0cbc-4184-b857-c96849852716"
 
 try:
     i2c_bus = busio.I2C(board.SCL, board.SDA)
