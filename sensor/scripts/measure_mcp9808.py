@@ -9,9 +9,9 @@ import json
 import requests
 
 # Config items
-TWX_SERVER = "pp-1907171416cp.portal.ptc.io"
+TWX_SERVER = "pp-1908091428ax.portal.ptc.io"
 TWX_THINGNAME = "ExampleThing"
-TWX_APPKEY = "4d2a6116-0cbc-4184-b857-c96849852716"
+TWX_APPKEY = "4e1f1f88-f3e0-4209-95d4-92ff9fb24737"
 
 try:
     i2c_bus = busio.I2C(board.SCL, board.SDA)
@@ -30,9 +30,11 @@ while True:
     print('Temperature: {} C {} F '.format(tempC, tempF))
 
     payload = {'temperature': tempC }
-    response = requests.put(api_endpoint, headers=api_headers, json=payload, verify=False)
-    # in a production environment, the SSL certificate should be verified
 
+    # in a production environment, the SSL certificate should be verified -- there will be warnings about this on the logger
+    response = requests.put(api_endpoint, headers=api_headers, json=payload, verify=False)
+
+    # if there's a problem, this will print out the error and quit
     response.raise_for_status()
 
     time.sleep(10)

@@ -43,7 +43,8 @@ First, you need to wire up the sensor. Per Adafruit's [guide](https://learn.adaf
 
 ### balena
 
-1. After you've made an account with balena, log into the dashboard and click "Create application".
+1. After you've made an account with balena, be sure to add an SSH key from your machine (this is
+    described [here](https://www.balena.io/docs/learn/getting-started/raspberrypi3/nodejs/#account-setup)), then log into the dashboard and click "Create application".
 2. Type whatever application name that you'd like (mine is "thingworx"), select Raspberry Pi 3 as the device type,
     keep the application type to "Starter", then click "Create new application".
 3. Now click on "+ Add device".
